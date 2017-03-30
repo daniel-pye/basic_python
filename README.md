@@ -1,2 +1,3 @@
 # hello-world
-Initialising test repo.
+
+Hello, I'm a journalist and Python enthusiast teaching myself to code and do data analysis.
