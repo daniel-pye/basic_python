@@ -1,3 +1,3 @@
-# hello-world
+# Just another Python repo
 
-Hello, I'm a journalist and Python enthusiast teaching myself to code and do data analysis.
+A repo where I'll put basic python scripts I write as I learn the language.
