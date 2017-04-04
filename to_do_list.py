@@ -49,3 +49,4 @@ def main():
         add_to_list(new_item)
 
 if__name__=="__main__":
+    main()
