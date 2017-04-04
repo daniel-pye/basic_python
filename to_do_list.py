@@ -29,20 +29,23 @@ def exit():
         for item in to_do_list:
             print(item)
 
-# print app instructions
-help()
+def main():
+    # print app instructions
+    help()
 
-while True:
-    #ask for new items
-    new_item = input("> ")
-    # enter the word DONE to quit the app
-    if new_item == 'DONE':
-        exit()
-        break
-    elif new_item == 'HELP':
-        help()
-        continue
-    elif new_item == 'SHOW':
-        show()
-        continue
-    add_to_list(new_item)
+    while True:
+        #ask for new items
+        new_item = input("> ")
+        # enter the word DONE to quit the app
+        if new_item == 'DONE':
+            exit()
+            break
+        elif new_item == 'HELP':
+            help()
+            continue
+        elif new_item == 'SHOW':
+            show()
+            continue
+        add_to_list(new_item)
+
+if__name__=="__main__":
