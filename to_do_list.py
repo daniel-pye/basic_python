@@ -1,8 +1,15 @@
+import os
+
 # create empty list
 to_do_list = []
 
+# clear screen
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
+
 # provide help info
 def help():
+    clear_screen()
     print("What do you need to do today?")
     print("""
     Enter 'SHOW' to see what's already on the list.
@@ -12,14 +19,35 @@ def help():
 
 # display current list if user enters SHOW command
 def show():
-    print("Here's your list so far: ")
-    for item in to_do_list:
-        print(item)
+    clear_screen()
 
-def add_to_list(new_item):
-    # add new item to the list
-    to_do_list.append(new_item)
-    print("Added {}. List now has {} items.".format(new_item, len(to_do_list)))
+    print("Here's your list so far: ")
+
+    index = 1
+    for item in to_do_list:
+        print("{}. {}".format(index, item))
+        index += 1
+
+    print("="*10)
+
+def add_to_list(item):
+    show()
+    if len(to_do_list):
+        position = input("Where should I add {}?\n"
+        "Press ENTER to add to the end of the list\n"
+        "> ".format(item))
+    else:
+        position = 0
+
+    try:
+        position = abs(int(position))
+    except ValueError:
+        position = None
+    if position is not None:
+        to_do_list.insert(position-1, item)
+    else:
+        to_do_list.append(item)
+    show()
 
 def exit():
     if len(to_do_list) == 0:
@@ -37,16 +65,17 @@ def main():
         #ask for new items
         new_item = input("> ")
         # enter the word DONE to quit the app
-        if new_item == 'DONE':
+        if new_item.upper() == 'DONE' or new_item.upper() == 'QUIT':
             exit()
             break
-        elif new_item == 'HELP':
+        elif new_item.upper() == 'HELP':
             help()
             continue
-        elif new_item == 'SHOW':
+        elif new_item.upper() == 'SHOW':
             show()
             continue
-        add_to_list(new_item)
+        else:
+            add_to_list(new_item)
 
-if__name__=="__main__":
+if __name__=="__main__":
     main()
