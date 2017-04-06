@@ -1,3 +1,3 @@
-# Basic Python repo
+# Basic Python scripts
 
-Where I'll put basic scripts I write as I learn the language.
+Scripts created while completing the Treehouse.com Python track
