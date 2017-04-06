@@ -12,9 +12,10 @@ def help():
     clear_screen()
     print("What do you need to do today?")
     print("""
-    Enter 'SHOW' to see what's already on the list.
+    Enter 'SHOW' to see what's already on your list.
     Enter 'HELP' for a list of commands.
     Enter 'DONE' to stop adding items to your to do list.
+    Enter 'REMOVE' to delete an item from your list.
     """)
 
 # display current list if user enters SHOW command
@@ -49,6 +50,15 @@ def add_to_list(item):
         to_do_list.append(item)
     show()
 
+def remove_from_list():
+    show()
+    what_to_remove = input("What would you like to remove?\n> ")
+    try:
+        to_do_list.remove(what_to_remove)
+    except ValueError:
+        pass
+    show()
+
 def exit():
     if len(to_do_list) == 0:
         print("You can relax!")
@@ -65,7 +75,7 @@ def main():
         #ask for new items
         new_item = input("> ")
         # enter the word DONE to quit the app
-        if new_item.upper() == 'DONE' or new_item.upper() == 'QUIT':
+        if new_item.upper() == 'DONE' or new_item.upper() == 'QUIT' or new_item.upper() == 'EXIT':
             exit()
             break
         elif new_item.upper() == 'HELP':
@@ -73,6 +83,9 @@ def main():
             continue
         elif new_item.upper() == 'SHOW':
             show()
+            continue
+        elif new_item.upper() == 'REMOVE':
+            remove_from_list()
             continue
         else:
             add_to_list(new_item)
