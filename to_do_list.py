@@ -24,8 +24,8 @@ def show():
 
     print("Here's your list so far: ")
 
-    index = 1
-    for item in to_do_list:
+
+    for index, item in enumerate(to_do_list, start=1):
         print("{}. {}".format(index, item))
         index += 1
 
