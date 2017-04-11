@@ -1,16 +1,6 @@
 import os
 import random
 
-# draw grid
-# pick random location for player
-# pick random location for exit door
-# pick random location for the monster
-# draw player in the grid
-# take input for movement
-# move player, unless invalid move (past edges of grid)
-# check for win/loss
-# clear screen and redraw grid
-
 CELLS = [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0),
          (0, 1), (1, 1), (2, 1), (3, 1), (4, 1),
          (0, 2), (1, 2), (2, 2), (3, 2), (4, 2),
