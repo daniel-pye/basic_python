@@ -8,6 +8,9 @@ def collatz(num):
             print(result)
             return result
 
-output = input("Enter the number to Collatz:\n")
-while output != 1:
-    output = collatz(int(output))
+try:
+    output = input("Enter the number to Collatz:\n")
+    while output != 1:
+        output = collatz(int(output))
+except ValueError:
+    print("Whoops, please type in an integer!")
