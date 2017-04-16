@@ -1,1 +1,1 @@
-# My answers to katas on (Codewars)[https://www.codewars.com]
+# My answers to katas on [Codewars](https://www.codewars.com)
