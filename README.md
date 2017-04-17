@@ -13,6 +13,8 @@ This readme file is also a curated notebpad of tips and tricks picked up during 
 
 * In interactive mode, the last printed expression is assigned to the variable
 
+* To return the opposite of a number: `return -number`
+
 ## Sequences
 
 * Loop over two or more sequences at the same time using the `zip()` function:
