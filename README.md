@@ -144,6 +144,8 @@ word2 = "thing"
 
 * Key-value pairs can be retreived using the `items()` method.
 
+___
+
 # Control Flow
 
 ## Conditionals and loops
@@ -214,12 +216,16 @@ word2 = "thing"
 
 * To unpack dictionaries for use in functions, use `function(**var)` to call the function using the variable for the dictionary.
 
+___
+
 # Modules
 
 * If a module's function will be used often in a script, it can be assigned to a local variable:
 ```python
     exit = sys.exit
 ```
+
+___
 
 # I/O
 
