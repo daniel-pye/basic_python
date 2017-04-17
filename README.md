@@ -3,7 +3,7 @@ Basic Python
 
 This repo contains scrips created while exploring the basics of the Python programming language and my solutions to Python challenges.
 
-This readme file is also a curated notbook of tips and tricks picked up during the process.
+This readme file is also a curated notebpad of tips and tricks picked up during the process.
 
 # Data Types and Structures
 
