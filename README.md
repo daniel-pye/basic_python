@@ -155,7 +155,7 @@ word2 = "thing"
 * Use the `for` statement to iterate over the elements in a sequence, such as a string, tuple or list. Use a break statement in a for loop to end the iteration early, or a continue statement to skip the rest of a block and continue with the next item. The `range()` function returns an iterator of integers that can be used in a for loop: `list(range(x, x))`.
 
 * It's recommended to first make a copy of a list to iterate over if you need to modify it as the iteration does not itself make a copy. This can be achieved using slice notation:
-````python
+```python
     for word in words[:]:
         if len(word) > 5:
             words.insert(0, word)
