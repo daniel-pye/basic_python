@@ -233,3 +233,11 @@ ___
 
 * To convert a value or values to a string, use the `str()` or `repr()` functions.
 
+# Regex
+
+* `([abc])` - creates a group that contains a set for the letters 'a', 'b', and 'c'. This could be later accessed from the Match object as .group(1)
+* `(?P<name>[abc])` - creates a named group that contains a set for the letters 'a', 'b', and 'c'. This could later be accessed from the Match object as .group('name').
+* `.groups()` - method to show all of the groups on a Match object.
+* `re.MULTILINE` or `re.M` - flag to make a pattern regard lines in your text as the beginning or end of a string.
+* `^` - specifies, in a pattern, the beginning of the string.
+* `$` - specifies, in a pattern, the end of the string.
